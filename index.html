@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surprise Spot Chennai | Booking Form</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: #fff;
+    padding: 25px 15px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #111;
+    padding: 30px;
+    border: 1px solid #c9a64b;
+    border-radius: 15px;
+    box-shadow: 0 0 25px #c9a64b18;
+}
+
+.logo {
+    display: block;
+    width: 220px;
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #e8c66a;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #bbb;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.section-title {
+    color: #e8c66a;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    margin: 25px 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #403720;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.full {
+    grid-column: 1 / -1;
+}
+
+label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #eee;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 13px;
+    background: #080808;
+    border: 1px solid #484033;
+    border-radius: 7px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #e8c66a;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #888;
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    margin-top: 28px;
+    padding: 15px;
+    border: none;
+    border-radius: 7px;
+    background: linear-gradient(100deg, #b78a2d, #f5dc88, #c49a40);
+    color: #111;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(1.1);
+}
+
+button:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+.note {
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full {
+        grid-column: auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Replace logo.png with your logo image path -->
+    <img src="logo.jpeg" alt="Surprise Spot Logo" class="logo">
+
+    <h1>Booking Details</h1>
+    <p class="subtitle">
+        Gifts That Create Memories
+    </p>
+
+    <form id="bookingForm"
+          action="https://formsubmit.co/surprisespotchennai@gmail.com"
+          method="POST">
+
+        <!-- FormSubmit settings -->
+        <input type="hidden" name="_subject"
+               value="New Surprise Spot Booking">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey"
+               style="display:none" tabindex="-1" autocomplete="off">
+
+        <h3 class="section-title">CUSTOMER DETAILS</h3>
+
+        <div class="form-grid">
+
+            <div class="field">
+                <label for="name">Name *</label>
+                <input id="name" type="text"
+                       name="Customer Name"
+                       placeholder="Enter customer name"
+                       required>
+            </div>
+
+            <div class="field">
+                <label for="contact">Contact Number *</label>
+                <input id="contact" type="tel"
+                       name="Contact Number"
+                       placeholder="Enter mobile number"
+                       pattern="[0-9+() -]{10,16}"
+                       required>
+            </div>
+
+        </div>
+
+        <h3 class="section-title">CELEBRATION SCHEDULE</h3>
+
+        <div class="form-grid">
+
+            <div class="field">
+                <label for="bookingDate">Booking Date *</label>
+                <input id="bookingDate" type="date"
+                       name="Booking Date" required>
+            </div>
+
+            <div class="field">
+                <label for="celebrationDate">Celebration Date *</label>
+                <input id="celebrationDate" type="date"
+                       name="Celebration Date" required>
+            </div>
+
+            <div class="field">
+                <label for="time">Celebration Time *</label>
+                <input id="time" type="text"
+                       name="Celebration Time"
+                       placeholder="e.g. 7 PM - 8 PM"
+                       required>
+            </div>
+
+            <div class="field">
+                <label for="person">Celebration Person (M/F) *</label>
+                <select id="person" name="Celebration Person"
+                        required>
+                    <option value="">Select</option>
+                    <option value="M">M</option>
+                    <option value="F">F</option>
+                </select>
+            </div>
+
+        </div>
+
+        <h3 class="section-title">PACKAGE & ADD-ONS</h3>
+
+        <div class="form-grid">
+
+            <div class="field">
+                <label for="package">Package *</label>
+                <input id="package" type="text"
+                       name="Package"
+                       placeholder="Enter package name (Butterfly, Moon , Heart)"
+                       required>
+            </div>
+
+            <div class="field">
+                <label for="advance">Advance Amount (₹) *</label>
+                <input id="advance" type="number"
+                       name="Advance Amount"
+                       min="0" step="1"
+                       placeholder="Enter amount"
+                       required>
+            </div>
+
+            <div class="field">
+                <label for="cake">Cake *</label>
+                <select id="cake" name="Cake" required>
+                    <option value="">Select cake type</option>
+                    <option value="B/F">B/F</option>
+                    <option value="W/F">W/F</option>
+                    <option value="No Cake">No Cake</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="cakeName">Cake Name</label>
+                <input id="cakeName" type="text"
+                       name="Cake Name"
+                       placeholder="Cake name or flavour">
+            </div>
+
+            <div class="field full">
+                <label for="addons">Add-ons</label>
+                <textarea id="addons" name="Add-ons"
+                          placeholder="Enter selected add-ons"></textarea>
+            </div>
+
+        </div>
+
+        <button id="submitBtn" type="submit">
+            Submit Booking Details
+        </button>
+
+        <p class="note">
+            Surprise Spot Chennai · Gifts That Create Memories
+        </p>
+
+    </form>
+</div>
+
+<script>
+const bookingDate = document.getElementById("bookingDate");
+const celebrationDate = document.getElementById("celebrationDate");
+const form = document.getElementById("bookingForm");
+const submitBtn = document.getElementById("submitBtn");
+
+// Use today's local date as the minimum date.
+const now = new Date();
+const today = new Date(
+    now.getTime() - now.getTimezoneOffset() * 60000
+).toISOString().slice(0, 10);
+
+bookingDate.min = today;
+celebrationDate.min = today;
+
+bookingDate.addEventListener("change", function () {
+    celebrationDate.min = bookingDate.value || today;
+
+    if (celebrationDate.value &&
+        celebrationDate.value < celebrationDate.min) {
+        celebrationDate.value = celebrationDate.min;
+    }
+});
+
+form.addEventListener("submit", function (event) {
+    if (celebrationDate.value < bookingDate.value) {
+        event.preventDefault();
+        alert("Celebration date cannot be before the booking date.");
+        return;
+    }
+
+    if (!form.checkValidity()) {
+        event.preventDefault();
+        form.reportValidity();
+        return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Submitting...";
+});
+</script>
+
+</body>
+</html>
